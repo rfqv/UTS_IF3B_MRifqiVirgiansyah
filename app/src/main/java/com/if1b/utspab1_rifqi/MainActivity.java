@@ -1,11 +1,14 @@
 package com.if1b.utspab1_rifqi;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,27 +24,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         getSupportActionBar().setTitle("Layout A");
         btnDaftar = findViewById(R.id.btn_daftar);
         etNama = findViewById(R.id.et_nama);
-
-        btnPindah.setOnClickListener(new View.OnClickListener() {
+        btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String nama = etNama.getText().toString();
-                if (nama.trim().equals("")) {
+                if (nama.trim().equals("")){
                     etNama.setError("Nama Harus Diisi!");
-                } else {
-                    Intent pindah = new Intent(MainActivity.this, SecondActivity.class);
+            } else {
+                    Intent pindah = new Intent(MainActivity.this, MainActivity2.class);
                     pindah.putExtra("xNama", nama);
                     startActivity(pindah);
                 }
             }
-        }
-    }
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        });
         Spinner spinaja = findViewById(R.id.sp_jalurdaftar);
         spinaja.setOnItemSelectedListener(this);
 
@@ -57,6 +52,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> arg0){
         // Auto-generated method stub
     }
-
-
-}
+    }
