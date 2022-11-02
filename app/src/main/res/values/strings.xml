@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UTS PAB1</string>
+    <string-array name="jalur_daftar">
+        <item>Tes Tertulis</item>
+        <item>Jalur Tanpa Tes</item>
+        <item>Ujian Saringan Masuk</item>
+    </string-array>
 </resources>
