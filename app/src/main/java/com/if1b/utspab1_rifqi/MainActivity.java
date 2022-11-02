@@ -28,9 +28,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 String nama = etNama.getText().toString();
-                if (nama.trim().equals("")){
+                if (nama.trim().equals("")) {
                     etNama.setError("Nama Harus Diisi!");
-            } else {
+                } else if(nomorDaftar.toString().trim().equals("")){
+                    etNmrDaftar.setError("Nomor Pendaftaran Harus Diisi!");
+                } else {
                     Intent pindah = new Intent(MainActivity.this, MainActivity2.class);
                     pindah.putExtra("xNama", nama);
                     startActivity(pindah);
