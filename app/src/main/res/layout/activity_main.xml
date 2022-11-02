@@ -16,7 +16,6 @@
         android:text="FORMULIR PENDAFTARAN"
         android:textSize="20sp"
         android:textStyle="bold"
-
         android:layout_centerHorizontal="true"
         />
 
@@ -40,13 +39,14 @@
         android:layout_below="@+id/et_nama"
         />
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/sp_jalurdaftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_below="@+id/et_nmrdaftar"
+        />
 
     <CheckBox
         android:id="@+id/cb_konfirdaftar"
