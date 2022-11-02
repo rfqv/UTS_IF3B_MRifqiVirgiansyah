@@ -22,7 +22,7 @@
 
     <EditText
         android:id="@+id/et_nama"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/et_nmrdaftar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -40,13 +40,21 @@
         android:layout_below="@+id/et_nama"
         />
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_jalurdaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/et_nmrdaftar"
+
     <CheckBox
         android:id="@+id/cb_konfirdaftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_below="@+id/et_nmrdaftar"
+        android:layout_below="@+id/sp_jalurdaftar"
         android:text="Konfirmasi Daftar"/>
 
     <Button
